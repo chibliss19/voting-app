@@ -1,0 +1,10 @@
+.git
+.github
+node_modules
+__pycache__
+*.pyc
+bin
+obj
+Dockerfile
+README.md
+.env

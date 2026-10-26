@@ -1,0 +1,8 @@
+imageOwner: "chibliss19"
+imageTag: "latest"
+vote:
+  replicas: 1
+worker:
+  replicas: 1
+result:
+  replicas: 1
