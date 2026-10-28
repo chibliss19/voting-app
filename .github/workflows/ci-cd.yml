@@ -1,7 +1,7 @@
 name: Build, Scan, and Deploy
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "master" ]
 env:
   REGISTRY: ghcr.io
 jobs:

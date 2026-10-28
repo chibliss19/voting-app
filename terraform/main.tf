@@ -1,12 +1,12 @@
 data "aws_vpc" "default" { default = true }
 data "aws_subnets" "default" {
   filter { name = "vpc-id"; values = [data.aws_vpc.default.id] }
-  filter { name = "availability-zone"; values = ["${var.aws_region}a", "${var.aws_region}b", "${var.aws_region}c"] }
+  filter { name = "availability-zone"; values = ["us-east-1a", "us-east-1b", "us-east-1c"] }
 }
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "~> 20.0"
-  cluster_name    = var.cluster_name
+  cluster_name    = "voting-app-cluster"
   cluster_version = "1.30"
   cluster_endpoint_public_access = true
   enable_cluster_creator_admin_permissions = true
